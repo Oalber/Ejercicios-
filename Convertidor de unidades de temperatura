@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+
+float temperatura, resultado;
+
+char unidad;
+
+printf("Ingrese la temperatura: ");
+
+scanf("%f", &temperatura);
+
+printf("Ingrese la unidad (C o F): ");
+
+scanf(" %c", &unidad);
+
+if (unidad == 'C') {
+
+resultado = (temperatura * 9/5) + 32;
+
+printf("%.2f grados Celsius equivalen a %.2f grados
+
+Fahrenheit.\n", temperatura, resultado);
+
+} else if (unidad == 'F') {
+
+resultado = (temperatura - 32) * 5/9;
+
+printf("%.2f grados Fahrenheit equivalen a %.2f grados
+
+Celsius.\n", temperatura, resultado);
+
+} else {
+
+printf("Unidad no válida.\n");
+
+}
+
+return 0;
+
+}
