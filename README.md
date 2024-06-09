@@ -65,5 +65,6 @@ return 1;
 printf("El resultado es: %f\n", resultado);
 
 return 0;
+
 }
 
