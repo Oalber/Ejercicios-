@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+
+float lado;
+
+printf("Ingrese la longitud del lado del cuadrado: ");
+
+scanf("%f", &lado);
+float area = lado * lado;
+
+printf("El área del cuadrado es de %.2f unidades cuadradas.\n",
+
+area);
+
+return 0;
+
+}
