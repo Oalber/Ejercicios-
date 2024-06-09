@@ -1,0 +1,67 @@
+#include <stdio.h>
+
+#include <string.h>
+
+int main() {
+
+char contraseña[50];
+
+char respuesta;
+
+do {
+
+printf("Ingrese su contraseña: ");
+
+scanf("%s", contraseña);
+
+int longitudContrasena = strlen(contraseña);
+
+int contieneMayuscula = 0;
+
+int contieneMinuscula = 0;
+
+int contieneNumero = 0;
+
+for (int i = 0; i < longitudContrasena; i++) {
+
+if (contraseña[i] >= 'A' && contraseña[i] <= 'Z') {
+
+contieneMayuscula = 1;
+
+} else if (contraseña[i] >= 'a' && contraseña[i] <= 'z') {
+
+contieneMinuscula = 1;
+
+} else if (contraseña[i] >= '0' && contraseña[i] <= '9') {
+
+contieneNumero = 1;
+
+}
+
+}
+
+if (longitudContrasena < 8 || !contieneMayuscula ||
+
+!contieneMinuscula || !contieneNumero) {
+
+printf("La contraseña no cumple con los requisitos. Debe tener
+
+al menos 8 caracteres, una letra mayúscula, una minúscula y un
+
+número.\n");
+
+respuesta = 's';
+
+} else {
+
+printf("Contraseña segura.\n");
+
+respuesta = 'n';
+
+}
+
+} while (respuesta == 's');
+
+return 0;
+
+}
