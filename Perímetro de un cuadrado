@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+
+float lado;
+
+printf("Ingrese la longitud del lado del cuadrado: ");
+
+scanf("%f", &lado);
+
+float perimetro = 4 * lado;
+
+printf("El perímetro del cuadrado es de %.2f unidades.\n",
+
+perimetro);
+
+return 0;
+
+}
